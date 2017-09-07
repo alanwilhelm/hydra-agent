@@ -1,35 +1,19 @@
-extern crate sys_info;
+extern crate serde;
+extern crate serde_json;
+#[macro_use]
+extern crate serde_derive;
+mod serializer;
+mod profiler;
 
 fn main() {
 
-    match sys_info::cpu_num() {
-        Ok(cnt) => println!("got me a cpu count: {}", cnt.to_string()),
-        Err(e) => println!("operational problem encountered: {}", e),
-    }
-
-    match sys_info::cpu_speed() {
-        Ok(cnt) => println!("got me a cpu speed: {}", cnt.to_string()),
-        Err(e) => println!("operational problem encountered: {}", e),
-    }
-
-    match sys_info::hostname() {
-        Ok(cnt) => println!("got me a hostname: {}", cnt),
-        Err(e) => println!("operational problem encountered: {}", e),
-    }
-
-    match sys_info::os_type() {
-        Ok(cnt) => println!("got me an OS Type: {}", cnt),
-        Err(e) => println!("operational problem encountered: {}", e),
-    }
-
-    match sys_info::os_release() {
-        Ok(cnt) => println!("got me an OS Release: {}", cnt),
-        Err(e) => println!("operational problem encountered: {}", e),
-    }
-
-    match sys_info::mem_info() {
-        Ok(cnt) => println!("got me some mem_info stats: {:?}", cnt),
-        Err(e) => println!("operational problem encountered: {}", e),
+    match profiler::get_stats() {
+        Ok(profile) =>
+            match serializer::write_json(profile) {
+                Ok(json) => println!("{}", json),
+                Err(e) => println!("{}", "{\"error\" : \"error\"}"),
+            }
+        Err(e) => println!("{}", "{\"error\" : \"error\"}")
     }
 
 }

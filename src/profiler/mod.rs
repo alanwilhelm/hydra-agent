@@ -43,7 +43,7 @@ pub fn get_stats() -> Result<(SystemProfile), Error> {
     };
 
     // match sys_info::mem_info() {
-    //     Ok(cnt) => println!("got me some mem_info stats: {:?}", cnt),
+    //     Ok(cnt) => println!("mem_info stats: {:?}", cnt),
     //     Err(e) => println!("operational problem encountered: {}", e),
     // }
 

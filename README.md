@@ -23,4 +23,3 @@ This agent collects information from and performs operations on the server. It w
 - [ ] Return disk space stats
 - [ ] Return memory usage stats
 - [ ] Struct for Error Response
-- [ ] Store returned SystemProfile(s) to RocksDB

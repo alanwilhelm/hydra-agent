@@ -5,11 +5,14 @@ extern crate serde_derive;
 mod serializer;
 mod profiler;
 mod docker;
+mod git;
 
 fn main() {
 
+    // Add cmd line argument parser
+    
     // testing
-    docker::status();
+    // docker::status();
 
     match profiler::get_stats() {
         Ok(profile) =>

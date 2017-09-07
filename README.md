@@ -14,6 +14,7 @@ This agent collects information from and performs operations on the server. It w
 - [x] Return basic system stats
 - [ ] Return advanced system stats
 - [x] Docker control/introspection
+- [x] Add git functionality
 - [ ] Docker create container
 - [ ] Postgres daemon control via systemd
 - [ ] Nginx process control via systemd

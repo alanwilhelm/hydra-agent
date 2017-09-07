@@ -1,4 +1,3 @@
-extern crate shiplift;
 use std::process::Command;
 
 //! systemd control module

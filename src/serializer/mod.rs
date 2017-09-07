@@ -1,8 +1,7 @@
 extern crate serde;
 extern crate serde_json;
 
-use std::result;
-use std::io::{Error, ErrorKind};
+use std::io::{Error};
 use profiler;
 
 pub fn write_json(profile: profiler::SystemProfile) -> Result<(String), Error> {

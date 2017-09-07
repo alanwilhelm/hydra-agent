@@ -4,8 +4,12 @@ extern crate serde_json;
 extern crate serde_derive;
 mod serializer;
 mod profiler;
+mod docker;
 
 fn main() {
+
+    // testing
+    docker::status();
 
     match profiler::get_stats() {
         Ok(profile) =>

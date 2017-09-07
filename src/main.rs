@@ -13,7 +13,6 @@ fn main() {
                 Ok(json) => println!("{}", json),
                 Err(e) => println!("{}", "{\"error\" : \"error\"}"),
             }
-        Err(e) => println!("{}", "{\"error\" : \"error\"}")
+        Err(e) => println!("{}", "{\"error\" : \"error\"}"),
     }
-
 }

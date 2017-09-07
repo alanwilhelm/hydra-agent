@@ -1,5 +1,7 @@
 extern crate shiplift;
 
+
+/// Docker control module
 pub fn status() {
     println!("Listing docker images");
     let docker = shiplift::Docker::new();

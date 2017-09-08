@@ -10,17 +10,18 @@ This agent collects information from and performs operations on the server. It w
 - Use `rustup default nightly`
 - OpenSSL `sudo apt-get install pkg-config libssl-dev`
 
-### Todo:
+### Features Todo:
 - [x] Return basic system stats
 - [ ] Return advanced system stats
 - [x] Docker control/introspection
 - [x] Add git functionality
 - [ ] Docker create container
 - [ ] Postgres daemon control via systemd
-- [ ] Nginx process control via systemd
+- [x] Nginx process control via systemd
 
 ###### Dev Todo
 - [x] Return Cpu count, CPU speed, Os, Release
 - [ ] Return disk space stats
 - [ ] Return memory usage stats
 - [ ] Struct for Error Response
+- [ ] Add command line args to agent
